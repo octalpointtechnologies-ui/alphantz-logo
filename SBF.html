@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>STUDENTS BUCKETING PLATFORM</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(1deg, rgba(255,255,255,1) 0%, rgba(0,68,255,1) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Orbitron';
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    height: 100px;
+    width: 200px;
+}
+
+.tagline {
+    font-family: 'Saira';
+    font-size: 20px;
+    color: #0400ff;
+    margin-bottom: 30px;
+}
+
+.process {
+    font-family: 'Shadows Into Light Two';
+    font-size: 22px;
+    color: black;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    text-decoration: underline wavy;
+    text-underline-offset: 10px;
+}
+
+.container1 {
+    background: #fff;
+    width: 420px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: black;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #162d66;
+}
+
+.message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <img src="https://raw.githubusercontent.com/octalpointtechnologies-ui/alphantz-logo/refs/heads/main/Final%20Logo.jpg" class="logo-img" alt="Logo">
+    <div class="logo">Alphantz Skill Bridge Solutions</div>
+    <div class="tagline"><i>* * Building Industry Ready Talent * *</i></div>
+</div>
+
+<div class="process">STUDENTS BUCKETING PLATFORM</div>
+
+<div class="container1">
+<form onsubmit="return submitMenu()">
+
+<select id="courseSelect">
+<option value="">-- Select Course --</option>
+
+<optgroup label="Commerce & Management">
+<option value="B.Com">B.Com</option>
+<option value="B.Com A&F">B.Com A & F</option>
+<option value="B.Com CA">B.Com CA</option>
+<option value="B.Com PA">B.Com PA</option>
+<option value="M.Com">M.Com</option>
+<option value="BBA">BBA</option>
+<option value="BBA CA">BBA CA</option>
+<option value="BBA Aviation">BBA Aviation Management</option>
+<option value="BBA Logistics">BBA Logistics</option>
+<option value="MIB">MIB</option>
+</optgroup>
+
+<optgroup label="Computer Science">
+<option value="BCA">BCA</option>
+<option value="B.Sc CS">B.Sc Computer Science</option>
+<option value="B.Sc CT">B.Sc Computer Technology</option>
+<option value="B.Sc IT">B.Sc IT</option>
+<option value="B.Sc DS">B.Sc Data Science</option>
+<option value="B.Sc AI ML">B.Sc AI & ML</option>
+<option value="B.Sc Cyber">B.Sc Cyber Forensic</option>
+<option value="MCA">MCA</option>
+<option value="M.Sc CS">M.Sc Computer Science</option>
+<option value="M.Sc IT">M.Sc IT</option>
+<option value="M.Sc DA">M.Sc Data Analytics</option>
+</optgroup>
+
+<optgroup label="Life Sciences">
+<option value="B.Sc Biochem">B.Sc Biochemistry</option>
+<option value="B.Sc Biotech">B.Sc Biotechnology</option>
+<option value="B.Sc Micro">B.Sc Microbiology</option>
+<option value="B.Sc Food">B.Sc Food Science & Nutrition</option>
+<option value="M.Sc Biochem">M.Sc Biochemistry</option>
+<option value="M.Sc Biotech">M.Sc Biotechnology</option>
+<option value="M.Sc Micro">M.Sc Microbiology</option>
+<option value="M.Sc Applied Micro">M.Sc Applied Microbiology</option>
+</optgroup>
+
+<optgroup label="Arts & Science">
+<option value="B.Sc Maths">B.Sc Mathematics</option>
+<option value="M.Sc Maths">M.Sc Mathematics</option>
+<option value="B.Sc ECS">B.Sc Electronics & Communication</option>
+<option value="M.Sc AE">M.Sc Applied Electronics</option>
+<option value="B.Sc Forensic">B.Sc Forensic Science</option>
+<option value="BA Criminology">BA Criminology</option>
+<option value="B.Sc Psychology">B.Sc Psychology</option>
+<option value="BA English">BA English</option>
+<option value="MA English">MA English</option>
+<option value="MSW">M.S.W – Master of Social Work</option>
+</optgroup>
+
+</select>
+
+<button type="submit">Submit</button>
+</form>
+
+<div class="message" id="menuMsg"></div>
+</div>
+
+<script>
+
+/* ===============================
+   DISABLE KEYBOARD & RIGHT CLICK
+   =============================== */
+
+document.addEventListener('keydown', function (e) {
+    e.preventDefault();
+    alert(
+        "Right click & Keyboard activity has been disabled on this page.\nKindly use Mouse for Navigation"
+    );
+    return false;
+});
+
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    alert(
+        "Right click & Keyboard activity has been disabled on this page.\nKindly use Mouse for Navigation"
+    );
+});
+
+
+function submitMenu() {
+    const course = document.getElementById("courseSelect").value;
+    const msg = document.getElementById("menuMsg");
+
+    msg.innerText = "";
+
+    if (!course) {
+        msg.style.color = "red";
+        msg.innerText = "Please select a course";
+        return false;
+    }
+
+    /* COURSE → GITHUB HTML PAGE MAP */
+    const pageMap = {
+        "B.Com": "bcom.html",
+        "BBA": "bba.html",
+        "MIB": "mib.html",
+        "MSW": "msw.html",
+        "BA English": "ba-english.html"
+    };
+
+    const fileName = pageMap[course];
+
+    if (!fileName) {
+        msg.style.color = "red";
+        msg.innerText = "No page configured for this course";
+        return false;
+    }
+
+    /* jsDelivr GitHub HTML URL */
+    const githubHTML =
+        "https://cdn.jsdelivr.net/gh/octalpointtechnologies-ui/alphantz-logo@main/pages/" +
+        fileName;
+
+    window.open(githubHTML, "_blank");
+
+    return false;
+}
+</script>
+
+</body>
+</html>

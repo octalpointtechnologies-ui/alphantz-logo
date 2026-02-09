@@ -8,5 +8,3 @@ function runProcess(course) {
         console.log("Course received from main page:", course);
     }
 }
-
-

@@ -1,0 +1,10 @@
+function runProcess(course) {
+    if (course === "MSW") {
+        window.open(
+            "https://forms.zohopublic.in/alphantztechnologiesout1/form/PerformanceEvaluationForm/formperma/-KnROuVYWj4ZZ1k0D3dn4plHqsDSAsfZgPUDtuJizA4",
+            "_blank"
+        );
+    } else {
+        console.log("Course received:", course);
+    }
+}

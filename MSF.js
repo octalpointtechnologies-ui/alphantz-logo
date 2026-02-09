@@ -1,4 +1,4 @@
-function runProcess(course) {
+function runProcess(select.value) {
     if (course === "Basic") {
         window.open(
             "https://forms.office.com/Pages/ResponsePage.aspx?id=pT9MJPUur0SCtlIsp4LA9Pfzbic-KZlMnhwXNZ2xyl9URVRZMjVNTzAwTTVXV1ZZWExLU1dXT09BSy4u",

@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Saira:wght@100..900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -20,56 +21,65 @@ body {
     align-items: center;
 }
 
+/* HEADER */
+
 .header {
-background: #fff;
+    background: #fff;
     margin-top: 20px;
     text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.logo-img {
+    height: 100px;
 }
 
 .logo {
     font-family: 'Orbitron';
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
-    letter-spacing: 2px;
 }
 
 .tagline {
     font-family: 'Saira';
     font-size: 18px;
     color: #0400ff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.logo-img {
-    height: 100px;
-    width: auto;
-}
+/* TITLE */
 
 .process {
     font-family: 'Shadows Into Light Two';
-    font-size: 22px;
+    font-size: 24px;
     letter-spacing: 3px;
     text-decoration: underline wavy;
     text-underline-offset: 10px;
-    margin-bottom: 25px;
+    margin: 20px;
 }
+
+/* BOX */
 
 .box {
     background: #fff;
     width: 420px;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* RADIO */
+
 .radio-option {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-bottom: 12px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .radio-option:hover {
@@ -78,137 +88,177 @@ background: #fff;
 }
 
 .radio-option input {
-    margin-right: 10px;
+    margin-right: 12px;
+    cursor: pointer;
 }
+
+/* BUTTON */
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background: black;
     border: none;
     color: white;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    margin-top: 15px;
 }
 
 button:hover {
     background: #162d66;
 }
 
+/* MESSAGE */
+
 .message {
     text-align: center;
     font-weight: bold;
     margin-top: 15px;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <div class="header">
+
 <img src="https://raw.githubusercontent.com/octalpointtechnologies-ui/alphantz-logo/main/Final%20Logo.jpg"
-         class="logo-img" alt="Logo">
-    <div class="logo">Alphantz Skill Bridge Solutions</div>
-    <div class="tagline"><i>* * Building Industry Ready Talent * *</i></div>
+class="logo-img">
+
+<div class="logo">
+Alphantz Skill Bridge Solutions
 </div>
 
-<div class="process">STUDENTS BUCKETING PLATFORM</div>
+<div class="tagline">
+<i>* * Building Industry Ready Talent * *</i>
+</div>
+
+</div>
+
+<!-- TITLE -->
+
+<div class="process">
+STUDENTS BUCKETING PLATFORM
+</div>
+
+<!-- BOX -->
 
 <div class="box">
+
 <form onsubmit="return submitMenu();">
 
 <label class="radio-option">
-    <input type="radio" name="test" value="Computer_Science">
-    B.Sc. Computer Science
+<input type="radio" name="test" value="B.Sc. Computer Science">
+B.Sc. Computer Science
 </label>
 
 <label class="radio-option">
-    <input type="radio" name="test" value="Computer_Science">
-    B.Sc. Information Technology
+<input type="radio" name="test" value="B.Sc. Information Technology">
+B.Sc. Information Technology
 </label>
 
 <label class="radio-option">
-    <input type="radio" name="test" value="B.Sc. Computer Technology">
-    B.Sc. Computer Technology
+<input type="radio" name="test" value="B.Sc. Computer Technology">
+B.Sc. Computer Technology
 </label>
 
 <label class="radio-option">
-    <input type="radio" name="test" value="BCA (Bachelor of Computer Applications)">
-    BCA (Bachelor of Computer Applications)
+<input type="radio" name="test" value="BCA">
+BCA (Bachelor of Computer Applications)
 </label>
 
-<button type="submit">Submit</button>
+<button type="submit">
+Submit
+</button>
 
 </form>
 
 <div class="message" id="menuMsg"></div>
+
 </div>
 
 <script>
-/* ===============================
-   DISABLE KEYBOARD & RIGHT CLICK
-   =============================== */
 
-document.addEventListener('keydown', function (e) {
+/* DISABLE RIGHT CLICK */
+
+document.addEventListener("contextmenu", function(e) {
+
     e.preventDefault();
+
     alert(
-        "Right click & Keyboard activity has been disabled on this page.\nKindly use Mouse for Navigation"
+    "Right click has been disabled.\nKindly use Mouse for Navigation"
     );
-    return false;
+
 });
 
-document.addEventListener('contextmenu', function (e) {
+/* DISABLE KEYBOARD */
+
+document.addEventListener("keydown", function(e) {
+
     e.preventDefault();
+
     alert(
-        "Right click & Keyboard activity has been disabled on this page.\nKindly use Mouse for Navigation"
+    "Keyboard activity disabled.\nKindly use Mouse for Navigation"
     );
+
 });
 
-/* ===============================
-   SUBMIT HANDLER
-   =============================== */
+/* SUBMIT HANDLER */
 
 function submitMenu() {
-    const selected = document.querySelector('input[name="test"]:checked');
-    const msg = document.getElementById("menuMsg");
+
+    const selected =
+    document.querySelector('input[name="test"]:checked');
+
+    const msg =
+    document.getElementById("menuMsg");
 
     msg.innerText = "";
 
     if (!selected) {
+
         msg.style.color = "red";
-        msg.innerText = "Please select a test";
+
+        msg.innerText =
+        "Please select a department";
+
         return false;
     }
 
-    // BASIC TEST → MICROSOFT FORM
-    if (selected.value === "Computer_Science") {
+    /* COMPUTER DEPARTMENTS */
+
+    const computerDepartments = [
+
+    "B.Sc. Computer Science",
+    "B.Sc. Information Technology",
+    "B.Sc. Computer Technology",
+    "BCA"
+
+    ];
+
+    if (computerDepartments.includes(selected.value)) {
+
         window.open(
-            "https://forms.office.com/Pages/ResponsePage.aspx?id=pT9MJPUur0SCtlIsp4LA9Pfzbic-KZlMnhwXNZ2xyl9URVRZMjVNTzAwTTVXV1ZZWExLU1dXT09BSy4u",
-            "_blank"
+
+        "https://forms.office.com/Pages/ResponsePage.aspx?id=pT9MJPUur0SCtlIsp4LA9Pfzbic-KZlMnhwXNZ2xyl9URVRZMjVNTzAwTTVXV1ZZWExLU1dXT09BSy4u",
+
+        "_blank"
+
         );
+
         return false;
-    }
-
-    // PLACEHOLDERS
-    if (selected.value === "Technical") {
-        msg.style.color = "green";
-        msg.innerText = "Technical test not enabled yet";
-    }
-
-    if (selected.value === "Typing") {
-        msg.style.color = "green";
-        msg.innerText = "Typing test not enabled yet";
     }
 
     return false;
+
 }
+
 </script>
 
 </body>
 </html>
-
-
-

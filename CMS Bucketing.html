@@ -4,126 +4,124 @@
 <meta charset="UTF-8">
 <title>STUDENTS BUCKETING PLATFORM</title>
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Saira:wght@100..900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
 
 <style>
 
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(1deg, #ffffff 0%, #0044ff 100%);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body{
+margin:0;
+font-family:Segoe UI;
+background:linear-gradient(1deg,#ffffff,#0044ff);
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 /* HEADER */
 
-.header {
-    background: #fff;
-    margin-top: 20px;
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 8px;
+.header{
+background:white;
+margin-top:20px;
+padding:10px 20px;
+border-radius:8px;
+text-align:center;
 }
 
-.logo-img {
-    height: 100px;
+.logo-img{
+height:100px;
 }
 
-.logo {
-    font-family: 'Orbitron';
-    font-size: 32px;
-    font-weight: bold;
+.logo{
+font-family:Orbitron;
+font-size:30px;
+font-weight:bold;
 }
 
-.tagline {
-    font-family: 'Saira';
-    font-size: 18px;
-    color: #0400ff;
-    margin-bottom: 10px;
+.tagline{
+font-family:Saira;
+color:blue;
 }
 
 /* TITLE */
 
-.process {
-    font-family: 'Shadows Into Light Two';
-    font-size: 24px;
-    letter-spacing: 3px;
-    text-decoration: underline wavy;
-    text-underline-offset: 10px;
-    margin: 20px;
+.process{
+font-family:"Shadows Into Light Two";
+font-size:24px;
+margin:20px;
+text-decoration:underline wavy;
 }
 
-/* BOX */
+/* MAIN BOX */
 
-.box {
-    background: #fff;
-    width: 420px;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+.box{
+background:white;
+width:800px;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* TWO SIDE LAYOUT */
+
+.columns{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* CATEGORY */
+
+.category{
+font-weight:bold;
+color:#0033cc;
+margin-top:15px;
+margin-bottom:8px;
 }
 
 /* RADIO */
 
-.radio-option {
-    display: flex;
-    align-items: center;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    transition: 0.2s;
+.radio-option{
+display:flex;
+align-items:center;
+padding:8px;
+border:1px solid #ccc;
+border-radius:6px;
+margin-bottom:8px;
+cursor:pointer;
 }
 
-.radio-option:hover {
-    background: #f3f6ff;
-    border-color: #1f3c88;
-}
-
-.radio-option input {
-    margin-right: 12px;
-    cursor: pointer;
+.radio-option:hover{
+background:#f3f6ff;
 }
 
 /* BUTTON */
 
-button {
-    width: 100%;
-    padding: 14px;
-    background: black;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
+button{
+width:100%;
+padding:14px;
+background:black;
+color:white;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
 }
 
-button:hover {
-    background: #162d66;
+button:hover{
+background:#162d66;
 }
 
-/* MESSAGE */
-
-.message {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 15px;
+.message{
+text-align:center;
+margin-top:10px;
+font-weight:bold;
 }
 
 </style>
 </head>
 
 <body>
-
-<!-- HEADER -->
 
 <div class="header">
 
@@ -135,46 +133,132 @@ Alphantz Skill Bridge Solutions
 </div>
 
 <div class="tagline">
-<i>* * Building Industry Ready Talent * *</i>
+Building Industry Ready Talent
 </div>
 
 </div>
-
-<!-- TITLE -->
 
 <div class="process">
 STUDENTS BUCKETING PLATFORM
 </div>
 
-<!-- BOX -->
-
 <div class="box">
 
 <form onsubmit="return submitMenu();">
 
+<div class="columns">
+
+<!-- LEFT COLUMN -->
+
+<div>
+
+<div class="category">Computer & Technology</div>
+
 <label class="radio-option">
-<input type="radio" name="test" value="B.Sc. Computer Science">
-B.Sc. Computer Science
+<input type="radio" name="dept" value="CS"> B.Sc. Computer Science
 </label>
 
 <label class="radio-option">
-<input type="radio" name="test" value="B.Sc. Information Technology">
-B.Sc. Information Technology
+<input type="radio" name="dept" value="IT"> B.Sc. Information Technology
 </label>
 
 <label class="radio-option">
-<input type="radio" name="test" value="B.Sc. Computer Technology">
-B.Sc. Computer Technology
+<input type="radio" name="dept" value="CT"> B.Sc. Computer Technology
 </label>
 
 <label class="radio-option">
-<input type="radio" name="test" value="BCA">
-BCA (Bachelor of Computer Applications)
+<input type="radio" name="dept" value="BCA"> BCA
 </label>
 
-<button type="submit">
-Submit
-</button>
+
+<div class="category">Forensic & Cyber Sciences</div>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="CYBER"> Digital & Cyber Forensic Sciences
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="FORENSIC"> Forensic Science
+</label>
+
+
+<div class="category">AI & ML</div>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="AI"> Artificial Intelligence & Machine Learning
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="DS"> Data Science
+</label>
+
+</div>
+
+<!-- RIGHT COLUMN -->
+
+<div>
+
+<div class="category">Life Sciences</div>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="MICRO"> Microbiology
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BIOCHEM"> Biochemistry
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BIOTECH"> Biotechnology
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="FOOD"> Food Science & Nutrition
+</label>
+
+
+<div class="category">Commerce Programs</div>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BCOM"> B.Com General
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BCOMCA"> B.Com CA
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BCOMPA"> B.Com PA
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BCOMAF"> B.Com A & F
+</label>
+
+
+<div class="category">Management Programs</div>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BBA"> BBA General
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BBACA"> BBA CA
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BBAAV"> BBA Aviation
+</label>
+
+<label class="radio-option">
+<input type="radio" name="dept" value="BBALOG"> BBA Logistics
+</label>
+
+</div>
+
+</div>
+
+<button type="submit">Submit</button>
 
 </form>
 
@@ -184,78 +268,44 @@ Submit
 
 <script>
 
-/* DISABLE RIGHT CLICK */
+function submitMenu(){
 
-document.addEventListener("contextmenu", function(e) {
+const selected=document.querySelector('input[name="dept"]:checked');
 
-    e.preventDefault();
+if(!selected){
 
-    alert(
-    "Right click has been disabled.\nKindly use Mouse for Navigation"
-    );
+document.getElementById("menuMsg").innerHTML="Please select department";
+return false;
+}
 
-});
+/* LINKS */
 
-/* DISABLE KEYBOARD */
+const computer=["CS","IT","CT","BCA"];
+const forensic=["CYBER","FORENSIC"];
+const ai=["AI","DS"];
+const life=["MICRO","BIOCHEM","BIOTECH","FOOD"];
+const commerce=["BCOM","BCOMCA","BCOMPA","BCOMAF"];
+const management=["BBA","BBACA","BBAAV","BBALOG"];
 
-document.addEventListener("keydown", function(e) {
+if(computer.includes(selected.value))
+window.open("YOUR-COMPUTER-FORM");
 
-    e.preventDefault();
+else if(forensic.includes(selected.value))
+window.open("YOUR-FORENSIC-FORM");
 
-    alert(
-    "Keyboard activity disabled.\nKindly use Mouse for Navigation"
-    );
+else if(ai.includes(selected.value))
+window.open("YOUR-AI-FORM");
 
-});
+else if(life.includes(selected.value))
+window.open("YOUR-LIFE-FORM");
 
-/* SUBMIT HANDLER */
+else if(commerce.includes(selected.value))
+window.open("YOUR-COMMERCE-FORM");
 
-function submitMenu() {
+else if(management.includes(selected.value))
+window.open("YOUR-MANAGEMENT-FORM");
 
-    const selected =
-    document.querySelector('input[name="test"]:checked');
-
-    const msg =
-    document.getElementById("menuMsg");
-
-    msg.innerText = "";
-
-    if (!selected) {
-
-        msg.style.color = "red";
-
-        msg.innerText =
-        "Please select a department";
-
-        return false;
-    }
-
-    /* COMPUTER DEPARTMENTS */
-
-    const computerDepartments = [
-
-    "B.Sc. Computer Science",
-    "B.Sc. Information Technology",
-    "B.Sc. Computer Technology",
-    "BCA"
-
-    ];
-
-    if (computerDepartments.includes(selected.value)) {
-
-        window.open(
-
-        "https://forms.office.com/Pages/ResponsePage.aspx?id=pT9MJPUur0SCtlIsp4LA9Pfzbic-KZlMnhwXNZ2xyl9URVRZMjVNTzAwTTVXV1ZZWExLU1dXT09BSy4u",
-
-        "_blank"
-
-        );
-
-        return false;
-    }
-
-    return false;
-
+return false;
 }
 
 </script>
